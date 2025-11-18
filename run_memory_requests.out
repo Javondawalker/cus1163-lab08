@@ -1,0 +1,41 @@
+========================================
+Memory Allocation Simulator (First-Fit)
+========================================
+
+Reading from: memory_requests.txt
+Total Memory: 1024 KB
+----------------------------------------
+
+Processing requests...
+
+REQUEST P1 100 KB -> SUCCESS
+REQUEST P2 250 KB -> SUCCESS
+REQUEST P3 150 KB -> SUCCESS
+RELEASE P1 -> SUCCESS
+REQUEST P4 120 KB -> SUCCESS
+RELEASE P2 -> SUCCESS
+REQUEST P5 200 KB -> SUCCESS
+
+========================================
+Final Memory State
+========================================
+Block 1: [0-199]       P5 (200 KB) - ALLOCATED
+Block 2: [200-349]     FREE (150 KB)
+Block 3: [350-499]     P3 (150 KB) - ALLOCATED
+Block 4: [500-619]     P4 (120 KB) - ALLOCATED
+Block 5: [620-1023]    FREE (404 KB)
+
+========================================
+Memory Statistics
+========================================
+Total Memory:           1024 KB
+Allocated Memory:       470 KB (45.90%)
+Free Memory:            554 KB (54.10%)
+Number of Processes:    3
+Number of Free Blocks:  2
+Largest Free Block:     404 KB
+External Fragmentation: 27.08%
+
+Successful Allocations: 5
+Failed Allocations:     0
+========================================

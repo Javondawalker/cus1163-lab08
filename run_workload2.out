@@ -1,0 +1,41 @@
+========================================
+Memory Allocation Simulator (First-Fit)
+========================================
+
+Reading from: workload2.txt
+Total Memory: 2048 KB
+----------------------------------------
+
+Processing requests...
+
+REQUEST X 500 KB -> SUCCESS
+REQUEST Y 800 KB -> SUCCESS
+REQUEST Z 300 KB -> SUCCESS
+RELEASE X -> SUCCESS
+REQUEST W 400 KB -> SUCCESS
+RELEASE Y -> SUCCESS
+REQUEST V 600 KB -> SUCCESS
+
+========================================
+Final Memory State
+========================================
+Block 1: [0-399]       W (400 KB) - ALLOCATED
+Block 2: [400-999]     V (600 KB) - ALLOCATED
+Block 3: [1000-1299]   FREE (300 KB)
+Block 4: [1300-1599]   Z (300 KB) - ALLOCATED
+Block 5: [1600-2047]   FREE (448 KB)
+
+========================================
+Memory Statistics
+========================================
+Total Memory:           2048 KB
+Allocated Memory:       1300 KB (63.48%)
+Free Memory:            748 KB (36.52%)
+Number of Processes:    3
+Number of Free Blocks:  2
+Largest Free Block:     448 KB
+External Fragmentation: 40.11%
+
+Successful Allocations: 5
+Failed Allocations:     0
+========================================
